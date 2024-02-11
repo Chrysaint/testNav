@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabs</title>
+</head>
+<body>
+
+    <template id="list-item">
+        <li class="tab" id="tab-{id}">
+            <div class="tab-header">
+                <button data-state="closed" class="arrow-btn" id="tab-{id}-btn">
+                </button>
+                <p class="tab-name" id="tab-{id}-name">Вторая вкладка</p>
+            </div>
+            
+            <div data-state="closed" class="grid-flow" id="child-{id}">
+                <ul class="tab__nav" id="list-{id}">
+    
+                </ul>
+            </div>
+        </li>
+    </template>
+
+    <nav class="navigation" id="nav">
+        <ul class="tab-list" id="head-list">
+            
+        </ul>
+    </nav>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

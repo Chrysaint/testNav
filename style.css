@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    background-color: #eeeeee;
+}
+
+ul, ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn_img {
+    width: inherit;
+}
+
+.navigation {
+    max-width: 350px;
+}
+.tab {
+    height: 100%;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.tab-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.arrow-btn {
+    width: 15px;
+    aspect-ratio: 1;
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+
+    background: none;
+    background-image: url('./arrowSvg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: transform 200ms ease-in;
+}
+
+.arrow-btn[data-state = "opened"] {
+    transform: rotate(360deg);
+}
+.arrow-btn[data-state = "closed"] {
+    transform: rotate(270deg);
+}
+
+.grid-flow {
+    display: grid;
+    transition: grid-template-rows 300ms ease-in-out;
+}
+
+.grid-flow[data-state="closed"] {
+    grid-template-rows: 0fr;
+}
+
+.grid-flow[data-state="opened"] {
+    grid-template-rows: 1fr;
+}
+
+.tab__nav {
+    display: grid;
+    overflow: hidden;
+}
+
+.first-layer {
+    margin-left: 1rem;
+}
